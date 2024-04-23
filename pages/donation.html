@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H4P -> Faça uma doação</title>
+    <link rel="stylesheet" href="../css/donation.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../assets/logo.jpg" alt="WebPage logo">
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul class="nav-items">
+                <li class="nav-item"><a href="../index.html">Início</a></li>
+                <li class="nav-item"><a href="../index.html#cases-section">Casos</a></li>
+                <li class="nav-item"><a href="../pages/donation.html">Doação</a></li>
+                <li class="nav-item"><a href="../pages/report.html">Reporte</a></li>
+                <li class="nav-item"><a href="../pages/associateds.html">Associados</a></li>
+                <li class="nav-item"><a href="../pages/about.html">Sobre nós</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="principal">
+        <div class="start" id="start-section">
+            <h1 class="title">
+                Doação
+            </h1>
+            <p class="subtitle">
+                Qualquer valor pode fazer a diferença na vida de um bichinho
+            </p>
+        </div>
+
+        <div class="form">
+            <form class="donation" id="donationForm">
+                <label class="text" for="name">Nome:</label>
+                <input class="text" type="text" name="name" id="name">
+                <label class="text" for="email">Email:</label>
+                <input class="text" type="email" name="email" id="email">
+                <label class="text" for="value">Valor:</label>
+                <input class="text" type="number" name="value" id="value">
+                <button class="button" onclick="generateQRCode()">
+                    Gerar QR
+                </button>
+            </form>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <p>© 2024 Help4Paws Team. All rights reserved.</p>
+    </footer>
+    <script>
+        function generateQRCode() {
+            alert("WORK IN PROGRESS")
+        }
+    </script>
+</body>
+</html>

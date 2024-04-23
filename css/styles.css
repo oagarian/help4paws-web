@@ -28,3 +28,41 @@
   #root, #__next {
     isolation: isolate;
   }
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #fce7f0;
+}
+
+.start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  color:#222222;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Pacifico", sans-serif;
+  font-size: 60px;
+  text-shadow: 0 4px 0 lightpink, 0 -4px 0 lightblue;
+}
+
+.subtitle {
+  font-family: "Concert One", sans-serif;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.text {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Concert One", sans-serif;
+}

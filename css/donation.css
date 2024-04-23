@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #fce7f0;
+}
+
+/* Main styles */
+
+main {
+    flex: 1 0 auto;
+}
+
+.form {
+    padding: 25px;
+}
+
+.donation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.donation input {
+    text-align: center;
+    border: none; 
+    background-color: #f3dae5;
+    border-bottom: 2px solid #252424; 
+    outline: none; 
+    width: 50%;
+    height: auto;
+    gap: 10px;
+}
+
+.donation input.text {
+    margin: 5px;
+}
+
+.button {
+    font-family: "Pacifico", sans-serif;
+    font-size: 20px;
+    background-color: lightpink;
+    color: rgb(0, 0, 0);
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    border: solid 2px rgb(62, 115, 133);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out 0s;
+    margin-top: 20px;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+

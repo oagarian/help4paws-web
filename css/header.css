@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Pacifico&display=swap');
+
+header {
+    flex-shrink: 0;
+}
+
+.main-header {
+    background-color: #f3afcc;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: #413f3f;
+}
+
+.logo img {
+    max-width: 40px;
+    height: auto;
+    margin-left: 80px;
+    border-radius: 50%;
+}
+
+.nav-items {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    margin-right: 80px;
+}
+
+.nav-item {
+    margin: 0;
+}
+
+.nav-item a {
+    font-family: "Concert One", sans-serif;
+    color: #413f3f;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 0.15s ease-in-out;
+    cursor: pointer;
+}
+
+.nav-item a:hover {
+    color: white;
+}

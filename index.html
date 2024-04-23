@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Help4Paws</title>
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -17,9 +19,10 @@
         </div>
         <nav class="main-nav">
             <ul class="nav-items">
-                <li class="nav-item"><a href="index.html" onclick="scrollToSection('start-section')">Início</a></li>
+                <li class="nav-item"><a onclick="scrollToSection('start-section')">Início</a></li>
                 <li class="nav-item"><a onclick="scrollToSection('cases-section')">Casos</a></li>
                 <li class="nav-item"><a href="pages/donation.html">Doação</a></li>
+                <li class="nav-item"><a href="pages/report.html">Reporte</a></li>
                 <li class="nav-item"><a href="pages/associateds.html">Associados</a></li>
                 <li class="nav-item"><a href="pages/about.html">Sobre nós</a></li>
             </ul>
@@ -40,13 +43,13 @@
                 O Help4Paws é uma iniciativa inovadora dedicada a resgatar animais de rua e proporcionar-lhes uma vida digna. Com um simples toque na tela (ou clique), você pode reportar ou doar para animais em situação de vulnerabilidade, permitindo que nossa equipe de resgate entre em ação imediatamente. Nossa rede de voluntários comprometidos e abrigos parceiros trabalha incansavelmente para resgatar, fornecer cuidados médicos e encontrar lares amorosos para esses animais. Junte-se a nós e faça a diferença na vida dos animais, tornando-se parte dessa causa nobre. 
             </p>
         </div>
-        <p class="cases-title">
+        <p class="title">
             Casos
         </p>
         <div class="cases" id="cases-section">    
             <div class="case">
                 <img src="assets/cases/case-1.jpg" alt="Case one">
-                <div class="case-text">
+                <div class="text">
                     <p class="case-name">
                         Gigante
                     </p>
@@ -54,8 +57,8 @@
                         Um lindo cachorrinho, que havia sido resgatado, estava dormindo dentro de uma lixeira, claramente demonstrando sinais de raiva.                </div>
             </div>
             <div class="case">
-                <img src="assets/cases/case-2.jpg" alt="Case one">
-                <div class="case-text">
+                <img src="assets/cases/case-2.jpg" alt="Case two">
+                <div class="text">
                     <p class="case-name">
                         Grandão
                     </p>
@@ -69,12 +72,13 @@
     <footer class="footer">
         <p>© 2024 Help4Paws Team. All rights reserved.</p>
     </footer>
-
+    <script src="js/scripts.js"></script>
     <script>
         function scrollToSection(sectionId) {
             const section = document.getElementById(sectionId);
             section.scrollIntoView({ behavior: 'smooth' });
         }
+
     </script>
 </body>
 </html>
