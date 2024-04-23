@@ -1,0 +1,113 @@
+/* Estilos para telas padrão */
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.main-header {
+    padding: 20px 0;
+}
+
+.logo img {
+    max-width: 100%;
+}
+
+.main-nav ul {
+    list-style-type: none;
+    overflow: hidden;
+    padding: 0;
+}
+
+.main-nav li {
+    float: left;
+    margin-right: 20px;
+}
+
+.main-nav a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+
+.principal .title {
+    margin-top: 20px;
+}
+
+
+
+.welcome .about {
+    text-align: justify;
+}
+
+.cases {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.case {
+    flex: 1;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.case img {
+    max-width: 100%;
+    height: auto;
+}
+
+.case .text {
+    text-align: justify;
+}
+
+/* Media queries para telas menores */
+@media (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+
+    .main-nav li {
+        margin-right: 10px;
+    }
+
+    .case {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-nav {
+        text-align: center;
+    }
+
+    .main-nav li {
+        float: none;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .cases {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .case {
+        margin-bottom: 20px;
+        width: 80%;
+
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header {
+        padding: 15px 0;
+    }
+
+    .main-nav a {
+        padding: 8px 12px;
+    }
+
+}

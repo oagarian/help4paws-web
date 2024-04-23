@@ -51,6 +51,17 @@ body {
   font-family: "Pacifico", sans-serif;
   font-size: 60px;
   text-shadow: 0 4px 0 lightpink, 0 -4px 0 lightblue;
+  box-sizing: border-box;
+  animation: infinite;
+  animation-name: animation;
+  animation-duration: 4s;
+  
+}
+
+@keyframes animation {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.02) rotate(0.6deg);}
+  100% {transform: scale(1);}
 }
 
 .subtitle {

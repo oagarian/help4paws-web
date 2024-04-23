@@ -10,3 +10,48 @@ body {
 main {
     flex: 1 0 auto;
 }
+
+.associateds {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5vh 10vw;
+    gap: 40px;
+}
+
+.associated {
+    display: flex;
+    padding: 30px;
+    gap: 20px;
+    background-color: lightpink;
+    border-radius: 80px 10px 50px 10px;
+}
+
+.associated img {
+    width: 200px;
+    height: auto;
+    border: solid 3px lightblue;
+    border-radius: 50px 10px 50px 10px;
+}
+
+.associated-name {
+    font-size: 30px;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.text {
+    gap: 20px;
+}
+
+.associated-info {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.data label{
+    color:rgb(11, 4, 46);
+    font-size: 20px;
+    text-decoration: underline;
+}
