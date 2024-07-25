@@ -25,7 +25,11 @@ main {
     gap: 20px;
     background-color: lightpink;
     border-radius: 80px 10px 50px 10px;
+    max-width: 80vw;
+    min-width: 300px;
+    width: 100%;
 }
+
 
 .associated img {
     width: 200px;
