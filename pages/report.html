@@ -10,58 +10,41 @@
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script defer src="../script/script.js"></script>
 </head>
 <body>
     <header class="main-header">
-        <div class="logo">
-            <a href="../index.html">
-                <img src="../assets/logo.jpg" alt="WebPage logo">
-            </a>
-        </div>
-        <nav class="main-nav">
-            <ul class="nav-items">
-                <li class="nav-item"><a href="../index.html">Início</a></li>
-                <li class="nav-item"><a href="../index.html#cases-section">Casos</a></li>
-                <li class="nav-item"><a href="../pages/donation.html">Doação</a></li>
-                <li class="nav-item"><a href="../pages/report.html">Reporte</a></li>
-                <li class="nav-item"><a href="../pages/associateds.html">Associados</a></li>
-            </ul>
-        </nav>
     </header>
     <main class="principal">
         <div class="start" id="start-section">
-            <h1 class="title">
-                Reporte uma situação
-            </h1>
-            <p class="subtitle">
-                Nos ajude a ajudar os animais em situação degradante
-            </p>
+            <h1 class="title">Reporte uma situação</h1>
+            <p class="subtitle">Nos ajude a ajudar os animais em situação degradante</p>
         </div>
-
         <div class="form">
-            <form class="report" id="reportForm">
+            <form class="report" id="reportForm" onsubmit="sendReport(event)">
                 <label class="text" for="name">Seu nome:</label>
-                <input class="text" type="text" name="name" id="name">
+                <input class="text" type="text" name="name" id="name" required>
                 <label class="text" for="address">Local:</label>
-                <input class="text" type="text" name="address" id="address">
+                <input class="text" type="text" name="address" id="address" required>
                 <label class="text" for="details">Detalhes:</label>
-                <textarea class="text" name="details" id="details"></textarea>
+                <textarea class="text" name="details" id="details" required></textarea>
                 <label class="text" for="image">Fotos:</label>
-                <input class="text" type="file" name="image" id="image">
-                <button class="button" onclick="sendReport()">
-                    Reportar
-                </button>
+                <input class="text" type="file" name="image" id="image" accept="image/jpeg,image/png,image/jpg">
+                <button class="button" type="submit">Reportar</button>
             </form>
         </div>
     </main>
     <footer class="footer">
         <p>© 2024 Help4Paws Team. All rights reserved.</p>
     </footer>
-
-    <script>
-        function sendReport() {
-            alert("WORK IN PROGRESS")
-        }
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init({
+              publicKey: "qiB3JVYxp7XBvqWf7",
+            });
+        })();
     </script>
 </body>
 </html>
