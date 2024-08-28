@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <script defer src="../script/script.js"></script> 
 </head>
 <body>
     <header class="main-header">
@@ -39,27 +40,31 @@
         </div>
 
         <div class="form">
-            <form class="donation" id="donationForm">
+            <form class="donation" id="donationForm" onsubmit="generateQRCode(event)">
+                <label class="text" for="anonymous">Doar anonimamente:</label>
+                <input type="checkbox" name="anonymous" id="anonymous" onchange="toggleAnonymous()">
                 <label class="text" for="name">Nome:</label>
-                <input class="text" type="text" name="name" id="name">
+                <input class="text" type="text" name="name" id="name" required>
                 <label class="text" for="email">Email:</label>
-                <input class="text" type="email" name="email" id="email">
+                <input class="text" type="email" name="email" id="email" required>
                 <label class="text" for="value">Valor:</label>
-                <input class="text" type="number" name="value" id="value">
-                <button class="button" onclick="generateQRCode()">
+                <input class="text" type="text" name="value" id="value" required>
+                
+                <button class="button" type="submit">
                     Gerar QR
                 </button>
             </form>
+            <div id="qrCodePopup" class="popup">
+                <div class="popup-content">
+                    <span class="close-button" onclick="closePopup()">&times;</span>
+                    <div id="qrCodeContainer"></div>
+                </div>
+            </div>
         </div>
     </main>
     
     <footer class="footer">
         <p>© 2024 Help4Paws Team. All rights reserved.</p>
     </footer>
-    <script>
-        function generateQRCode() {
-            alert("WORK IN PROGRESS")
-        }
-    </script>
 </body>
 </html>
