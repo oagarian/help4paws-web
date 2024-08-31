@@ -62,6 +62,7 @@
                     </div>           
                 </div>
             </div>
+            
             <div class="associated">
                 <img src="../assets/associateds/second-associated.jpg" alt="Second associated">
                 <div class="text">
@@ -92,5 +93,29 @@
     <footer class="footer">
         <p>© 2024 Help4Paws Team. All rights reserved.</p>
     </footer>
-</body>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const associatedElements = document.querySelectorAll('.associated');
+
+            const observerCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                        observer.unobserve(entry.target); 
+                    }
+                });
+            };
+
+            const observerOptions = {
+                threshold: 0.1 
+            };
+
+            const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+            associatedElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+    </body>
 </html>

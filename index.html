@@ -30,7 +30,7 @@
     </header>
 
     <main class="principal">
-        <div class="start" id="start-section">
+        <div class="start fade-in" id="start-section">
             <h1 class="title">
                 Help4Paws
             </h1>
@@ -38,16 +38,16 @@
                 da vida nas ruas a doce vida
             </p>
         </div>
-        <div class="welcome">
+        <div class="welcome fade-in">
             <p class="about">
                 O Help4Paws é uma iniciativa inovadora dedicada a resgatar animais de rua e proporcionar-lhes uma vida digna. Com um simples toque na tela (ou clique), você pode reportar ou doar para animais em situação de vulnerabilidade, permitindo que nossa equipe de resgate entre em ação imediatamente. Nossa rede de voluntários comprometidos e abrigos parceiros trabalha incansavelmente para resgatar, fornecer cuidados médicos e encontrar lares amorosos para esses animais. Junte-se a nós e faça a diferença na vida dos animais, tornando-se parte dessa causa nobre. 
             </p>
         </div>
-        <p class="title">
+        <p class="title fade-in">
             Casos
         </p>
-        <div class="cases" id="cases-section">    
-            <div class="case">
+        <div class="cases fade-in" id="cases-section">    
+            <div class="case fade-in">
                 <img src="assets/cases/case-1.jpg" alt="Case one">
                 <div class="text">
                     <p class="case-name">
@@ -58,7 +58,7 @@
                     </p>               
                 </div>
             </div>
-            <div class="case">
+            <div class="case fade-in">
                 <img src="assets/cases/case-2.jpg" alt="Case two">
                 <div class="text">
                     <p class="case-name">
@@ -75,12 +75,30 @@
     <footer class="footer">
         <p>© 2024 Help4Paws Team. All rights reserved.</p>
     </footer>
-    <script src="js/scripts.js"></script>
+    <script src="./script/script.js"></script>
     <script>
         function scrollToSection(sectionId) {
             const section = document.getElementById(sectionId);
             section.scrollIntoView({ behavior: 'smooth' });
         }
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.fade-in');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1 
+            });
+
+            elements.forEach(element => {
+                observer.observe(element);
+            });
+        });
 
     </script>
 </body>
